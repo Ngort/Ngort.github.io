@@ -1,7 +1,9 @@
 BEGIN:VCARD
-N:Gort Freitas;Nicolas;A;;
+N:Gort Freitas;Nicolas;A.;;
+ORG:Minerva Schools at KGI
 EMAIL;INTERNET:nico@minerva.kgi.edu
-TEL;WORK:+14158511432
-URL;WORK:www.linkedin.com/in/ngort
+TEL;Mobile:+14158511432
 URL:www.ngort.com
+URL;LinkedIn:www.linkedin.com/in/ngort
+URL; Github:www.github.com/ngort
 END:VCARD
