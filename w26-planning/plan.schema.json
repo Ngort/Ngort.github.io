@@ -31,13 +31,21 @@
         "lon-post-holiday",
         "lon-early-short",
         "ber-long",
-        "ber-extended-nye"
+        "ber-extended-nye",
+        "combo-nye",
+        "combo-jan",
+        "combo-short"
       ]
     },
     "settings": {
       "type": "object",
       "properties": {
         "budget": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "combinedBudget": {
           "type": "number",
           "minimum": 0,
           "maximum": 100000
@@ -107,6 +115,7 @@
       },
       "required": [
         "budget",
+        "combinedBudget",
         "careTransfer",
         "holidayCareDays",
         "supplementRate",
@@ -177,7 +186,10 @@
               "lon-post-holiday",
               "lon-early-short",
               "ber-long",
-              "ber-extended-nye"
+              "ber-extended-nye",
+              "combo-nye",
+              "combo-jan",
+              "combo-short"
             ]
           },
           "fareOverride": {
@@ -251,8 +263,8 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 19,
-      "maxItems": 19
+      "minItems": 22,
+      "maxItems": 22
     }
   },
   "required": [
