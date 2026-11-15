@@ -1,81 +1,71 @@
-# W26 planning desk
+# W26: exact journeys, rabbit duty and workdays
 
-Public site: https://ngort.github.io/w26-planning/
-Repository: Ngort/Ngort.github.io, branch master, directory w26-planning.
+Site: https://ngort.github.io/w26-planning/ · repository Ngort/Ngort.github.io, master, w26-planning/.
 
-A static, dependency-free holiday comparison tool. The public dataset uses fictional example journeys from Boston to Roanoke, London and Berlin in winter 2026/27, a demonstration budget, hosted accommodation and a rabbit-care example. No sample dates, budget, invitations or work arrangements describe a confirmed personal itinerary. Actual user facts belong only in a private imported working state.
+## Operate
 
-## Operate the page
+Choose an itinerary in the comparison or selector. The widgets show travel-plus-rabbit cost components, proportional flight/connection timelines, and each calendar day classified as holiday, weekend, remote candidate, leave/flex or home. Flight labels always show each local date/time and zone; elapsed durations use UTC offsets. Exact-date operating carriers remain unverified unless a source says otherwise. Marketing flight numbers are not proof of pet eligibility.
 
-1. Set budget, care mode, surcharges, contingency and any document/insurance fees. Zero document cost is a placeholder, not a statement that none apply.
-2. Review the complete-itinerary cards. All cost ranges except published care unit rates are planning estimates; none is a live travel quote. A budget label is separate from host/care/transport feasibility.
-3. Expand a card to edit dates and low/high costs. Transport includes bags/seat fees; daily includes food/local travel/activities; extras includes airport/final transfers, gifts/events. Keep components disjoint.
-4. Record priorities, exact work calendar, host windows, rabbit coverage and journey limits below the cards. Nothing is sent to a server. Changes save in localStorage on this browser/origin, not GitHub or other devices. Opening private browsing/clearing storage can lose changes.
-5. Export JSON to retain/share the working state. Export before importing another assistant’s changes. Import checks dates, IDs, nonnegative ordered ranges, care mode and settings before replacing state. Import/reset ask locally before replacement. Export files contain private answers.
-6. Use “Copy LLM handoff” for a prompt containing the current state, or follow the manual/API process below. The page has no built-in chat service or automatic LLM calls.
+Public defaults are illustrative; actual budget, employer calendar, hosts and care arrangements stay in browser-local/private exported state. Import a private file to populate actual constraints. A closure is inclusive: Dec24–31 covers all eight dates in that example. Jan1 is a workday until separately marked as a confirmed employer holiday. No employer name or private answers are published.
 
-At a tight cap, start with a local fallback and compare domestic rail versus air before international options. Use the separate Roanoke rail card to compare a long train journey against the flight card; both start with unverified allowances. Staying in Europe longer saves money only if fare reduction exceeds additional daily spending and rabbit care. Do not add two full cards to represent a combined trip: use the split or two-Europe card, or explicitly reconcile duplicated legs/care days.
+Only these costs count: intercity fare, travel ground transfers, required baggage, rabbit care and care transfers. Meals, gifts, entertainment, ordinary living costs, accommodation, entry documents, insurance and generic contingency are excluded. Costs outside this deliberately narrow scope are not represented as zero or waived. Accommodation is assumed covered for these examples.
 
-## Cost arithmetic
+The carry-on rule is mandatory: a stay of **3 destination nights or more requires 1 cabin carry-on**, included in the fare or added as a verified fee. Under 3 nights, use a personal-item-only baseline. Nights run from destination-local arrival date to destination-local return departure date, not number of care days. An unknown bag allowance cannot unlock a feasible recommendation, even if a displayed subtotal is below cap. Airline all-fare cabin policies can establish inclusion when applicable to every selected carrier/segment; cite the official policy and dimensions/weight. Do not guess a domestic United Basic Economy carry-on surcharge: a different fare may be required.
 
-All money is USD. For each plan:
+Each complete fare is a saved quote for one adult economy, not guaranteed current availability. Quoted totals are Axel-exclusive; any airline comparison is the provider's reported Google Flights comparison, not independently checked. Cached date pages often show much lower prices: they are not used as current quotes. Recheck the exact selected itinerary and fare rules before purchase. No booking or contact occurs in this app.
 
-`cash = transport + days × daily + extras + care + documents/insurance + friend subsidy`
+Expand travel costs to enter a verified manual fare override, transfer low/high range and required bag charge, and record evidence. Ground transfers are planning allowances, not quotes. A $0 bag input with an unchecked requirement means unresolved, not free. The chart remains a provisional subtotal until baggage and daily care are confirmed. Only one complete itinerary is selected: the cap covers the entire choice, never each leg separately. Multi-city combinations stay unpriced until a complete routing is quoted.
 
-`planning total = ceil(cash × (1 + contingency / 100))`
+Care counts all home-time calendar dates from the pre-airport departure buffer through arrival-home buffer, plus extra care days. A 23:59 Boston landing with a 1.5h home buffer needs coverage into the next day. Boarding is published $30/calendar day subject to availability. Two professional visits/day cost $60/day + $20 per holiday-rated day + $15 first meeting. Daily friend care plus a weekly professional supplement charges one visit per started week at the entered rate, plus any actual paid friend-care amount. Weekly professional visits alone are insufficient. Ordinary rabbit food/litter used at home is excluded. Airport/boarding transfers are separate actual trip costs.
 
-Days are inclusive calendar days including both departure and return, not nights. Care uses the same conservative span; extend dates or care extras for boarding dropoff, late returns or disruption. Home has no care/documents charge; daily home spending represents optional celebrations, not a travel requirement. Accommodation is zero in the demonstration; verify actual hosting and windows privately. Normal home food spending is not subtracted: these are gross cash budgets, not incremental costs. Friend's own food/local costs are excluded unless you add them to extras.
+Work uses Monday–Friday and the entered Boston work window, winter EST. Travel blocks run from first departure minus the pre-airport buffer to last arrival plus the arrival buffer, including every connection. Any overlap with a work window suggests one leave/flex day; other away workdays are remote candidates. No partial-day payroll claim is made. You can assign remote/leave manually; a remote override during travel retains a warning. Remote work is not assumed possible on a flight. A late-night arrival home before the following work window does not create an extra remote day. London is +5h and Berlin +6h in winter. Required meetings, international remote-work permission and recovery days remain user decisions.
 
-Care alternatives (never added together): boarding $30/day; two daily professional visits $60/day + $20/holiday-rated day + $15 first meeting; daily friend plus one professional visit per started week at $30–40 each, plus an optional friend thank-you. Transfer/supplies are added to each away plan. Weekly professionals require a daily carer; the confirmation box does not prove that coverage exists. Sources and availability gates are in sources.json. Work timezone overlap: Boston 9–5 is London 14–22 / Berlin 15–23 in winter. Exact employer leave/remote days cannot be calculated until its calendar and required hours are provided.
+## Portable state and LLM handoff
 
-For non-USD quotes record original currency, conversion rate, date and source in the private evidence notes; convert to USD before entering costs. Compare entire quote totals, including baggage and ground access. A range crossing the chosen cap means uncertainty; low above the cap means over budget; entire range below cap means only within the *planning* budget. No label means booking-ready.
+Use Export private JSON before importing/replacing state. State saves on this browser/origin only, not GitHub, cloud sync or other devices. Exports include private answers. The page never calls an LLM automatically. Copy LLM handoff contains the current state; or use this provider-neutral prompt:
 
-## LLM operation, any harness
+> Read README.md, AGENTS.md, data.json, sources.json, plan.schema.json and the private working state. Preserve confirmed user facts. Scope is travel + rabbit only. Require one carry-on for at least 3 destination nights; under 3 nights, personal-item baseline. Respect the private budget and closure dates; Jan1 is separate. Return a COMPLETE v2 state with all scenario IDs. Keep recommendations/evidence separate. Research exact whole itineraries, linked fares and timestamped segments; never join a price to unrelated flights. Bag inclusion/fee and daily care are feasibility gates. Ask at most three high-impact questions. No bookings or contacts.
 
-Read AGENTS.md, data.json, sources.json, plan.schema.json and exported private state. Ask at most three questions per round. Never overwrite confirmed user facts with inference. Current highest-value missing inputs: top two priorities; exact employer shutdown and required meetings; daily rabbit carer/boarding availability; host date windows.
+For quote research record: source URL, retrieval UTC time, quote time, traveler count/cabin, complete outbound and return, marketing and operating carriers, local ISO timestamps with UTC offsets, connections, taxes, total currency, baggage dimensions/weight/fees, and change/refund terms. Unknowns remain explicit. For non-USD fares record conversion rate/date/source before entering USD. New flight/date proposals require reviewed data.json updates; a state-only fare override does not change flight dates or source quote status. Explain every override in quoteNotes.
 
-Use this prompt with ChatGPT, Claude, Codex or another harness:
+Version1 imports migrate the budget, care mode and private notes into v2. Old daily/gift/extras/contingency costs, old trip dates and fare allowances are discarded because the v2 options are specific researched itineraries. Review closure and work assumptions after migration. The original v1 localStorage remains untouched for rollback; v2 saves separately.
 
-> Act as a holiday feasibility consultant. Read the attached operation instructions, source ledger, seed scenarios and private working state. Use the private state for actual budget, accommodation, origin, dates and transport constraints; public defaults are fictional examples. Preserve confirmed facts. Ask at most three unresolved high-impact questions. Establish care and host coverage before treating an itinerary as feasible. Compare Boston, short Roanoke Christmas and the preferred Europe option. Do not assume NYE is cheaper. Return the COMPLETE working-state JSON conforming to plan.schema.json with every scenario ID retained. Preserve unknowns in private answer text. Put recommendations, evidence and change explanation in a SEPARATE message. Label planning estimates and actual quotes distinctly. No bookings, messages to others or executable code.
+### Explicit local LLM API call
 
-Quote evidence in the separate response must include exact dates, traveler count, airports/stations, routing and operating carrier, baggage, transfers, total/currency, search timestamp/timezone, source URL, refund terms and availability limitations. Search links are not available fares. Explain every changed component and corresponding source ID. Keep private quote evidence in the `confirmations` answer or a private companion file; sources.json is the public research ledger, not a place for personal itineraries.
-
-### Explicit API call (optional, local only)
-
-Requires Python 3 with standard library. No dependencies. Put the API key in `OPENAI_API_KEY` using your secret manager/environment; never commit it or paste it into the browser. Set `OPENAI_MODEL` to a model available to your account. Calls incur provider charges. The helper sends README.md, AGENTS.md, source ledger, schema, data and **your private export** to OpenAI only when explicitly run.
+Requires Python3, no packages. Use environment credentials from a secret manager; never put a key in source/browser/storage. Set OPENAI_API_KEY and OPENAI_MODEL to an available model. This optional command sends instructions, public data/schema and the private input to OpenAI and may incur charges:
 
 ```sh
 cd w26-planning
-python3 llm_call.py /private/path/w26-private-plan.json /private/path/llm-response.txt
+python3 llm_call.py /private/path/input-v2.json /private/path/model-output.json
+node validate-state.cjs /private/path/model-output.json
 ```
 
-The script calls `POST https://api.openai.com/v1/responses`, requests a structured JSON working state using plan.schema.json, and writes model text to the specified private file. It never edits source or deploys. Structured output is still untrusted: validate, review the differences, then import. If the selected model does not support JSON schema responses, use the manual harness prompt instead of weakening validation. For another provider, use its own API/CLI with the same instructions, state and schema; there is no requirement to use OpenAI.
+The helper calls POST https://api.openai.com/v1/responses with store:false and strict JSON-schema text format, then writes a new private output file. It never edits source, imports state or publishes. The API call has no browsing tools: it cannot refresh fares and must preserve quote evidence instead of inventing new results. For another provider/harness, use its API or CLI with the same prompt/schema/state. Review changes and validate before importing. The site supports JSON import, not executable model code.
 
-```sh
-node validate-state.cjs /private/path/llm-response.txt
-node check.cjs
-```
+## Development and publishing
 
-The validator checks runtime invariants used by import. Review even valid output for factual accuracy, new assumptions and updated source evidence before import. Maintain a private prior export as rollback. A valid low airfare figure without dated evidence is not a quote.
-
-## Develop and publish
-
-No build or npm install is required. From a checkout root run:
+No dependencies or build required. Serve a repository checkout root:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000/w26-planning/ (do not open index.html through file:// because JSON fetches require HTTP). Run `node w26-planning/check.cjs` and `node --check w26-planning/app.js` before publishing. The checks exercise budget arithmetic, care alternatives, invalid imports and date boundaries. Browser testing, when available, should cover filters, cost edits, storage reload, export/import, invalid JSON and mobile widths.
+Open http://localhost:8000/w26-planning/; file:// cannot fetch JSON. Run:
 
-To publish an update in an authenticated checkout:
+```sh
+node w26-planning/check.cjs
+node --check w26-planning/app.js
+node --check w26-planning/model.js
+```
+
+Checks cover travel-only arithmetic, time offsets, midnight care, inclusive closure, separate Jan1 handling, work conflicts, carry-on at the 2/3-night boundary, bag fees, and invalid imports. When browser tools are available test selecting plans, updating closure/care inputs, remote overrides, export/import and mobile widths. Without visual inspection, report that limit.
+
+Publish only this directory, preserving unrelated site files:
 
 ```sh
 git add w26-planning
-git commit -m "Update winter 2026 holiday planner"
+git commit -m "Update exact holiday itineraries and cost/time widgets"
 git push origin master
 ```
 
-GitHub Pages must publish from master / root for the expected URL; preserve the repository’s configured source. Check Pages deployment status after pushing. No Sites hosting account, server, API keys or build service is necessary. Keep all changes in this directory; preserve unrelated site content. Initial deployment uses GitHub’s Git-data connector with a parent commit and expected-head check when shell networking is unavailable. Do not force-push over concurrent changes.
-
-Public seed dates are illustrative windows, not booked absence dates. Keep actual addresses, caregiver identities, home-access instructions, medical documents, employer calendar details and exact confirmed absences in private exports rather than committed data. No travel is purchased, nobody is contacted, and no recurring automation is configured by this tool.
+GitHub Pages deploys master/root. Check its workflow status and live assets. With connector Git APIs, use the current parent/base tree and an expected-head check; never force over concurrent edits. Keep actual private budgets, employer details, host identities, home-access instructions and confirmed absences in private exports, not public source.

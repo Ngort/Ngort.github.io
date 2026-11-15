@@ -1,386 +1,407 @@
 {
-  "version": 1,
+  "version": 2,
   "asOf": "2026-11-15",
   "currency": "USD",
-  "assumptions": [
-    "PUBLIC DEMONSTRATION DATA: cities, dates, costs and host arrangements are fictional planning examples, not anyone\u2019s confirmed plans.",
-    "Example origin: Boston, Massachusetts. Confirm actual origin in your private state.",
-    "Example period: Christmas 2026 / New Year 2027. Dates are illustrative only.",
-    "Example accommodation costs zero, subject to host confirmation.",
-    "All transport ranges are planning estimates, NOT live fares or availability.",
-    "Rabbit care charged for every calendar day away, including departure and return.",
-    "Daily spending includes meals, local travel and activities; excludes normal home spending offset."
-  ],
+  "publicData": "Public researched options, not booked journeys or personal plans. Browser defaults are illustrative; import private constraints.",
+  "scope": "Intercity fares + travel ground transfers + baggage + rabbit care/transfer only. No gifts, meals, everyday living, accommodation, documents, insurance or generic contingency.",
   "scenarios": [
     {
       "id": "home",
-      "name": "Boston \u00b7 both holidays",
-      "tag": "Lowest coordination",
-      "start": "2026-12-24",
-      "end": "2027-01-01",
-      "route": "Stay local from the example origin; MBTA and walking.",
-      "transport": [
+      "name": "Boston \u00b7 stay local",
+      "city": "Boston",
+      "fare": 0,
+      "airlinePrice": null,
+      "quoteStatus": "no_travel",
+      "quotedAt": null,
+      "source": null,
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "No baggage charge.",
+      "ground": [
         0,
-        40
+        0
       ],
-      "daily": [
-        0,
-        20
-      ],
-      "extras": [
-        0,
+      "groundStatus": "planning_allowance",
+      "outbound": [],
+      "inbound": [],
+      "note": "No trip, rabbit stays at home."
+    },
+    {
+      "id": "roa-aa",
+      "name": "Roanoke \u00b7 Christmas, carry-on included",
+      "city": "Roanoke",
+      "fare": 678,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:30:00Z",
+      "source": "https://helloaxel.com/en/r/CMvmXr3cKv?fare=0&fare_ref=315e45ae085d5f4a&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Main Cabin quote explicitly includes 1 carry-on and seat selection. Changes: no change fee plus fare difference. Nonrefundable. Cabin bag \u226422\u00d714\u00d79 inches; regional aircraft may require free gate valet.",
+      "ground": [
+        10,
         100
       ],
-      "care": false,
-      "complexity": 1,
-      "gates": [
-        "Choose local company and holiday plans."
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "AA1004",
+          "origin": "BOS",
+          "destination": "CLT",
+          "departure": "2026-12-24T08:00:00-05:00",
+          "arrival": "2026-12-24T10:31:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA5813",
+          "origin": "CLT",
+          "destination": "ROA",
+          "departure": "2026-12-24T11:20:00-05:00",
+          "arrival": "2026-12-24T12:40:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "note": "Best fallback if budget or rabbit care blocks travel. Local spending is optional, not a cost of being away."
+      "inbound": [
+        {
+          "number": "AA5931",
+          "origin": "ROA",
+          "destination": "PHL",
+          "departure": "2026-12-28T06:00:00-05:00",
+          "arrival": "2026-12-28T07:36:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA4443",
+          "origin": "PHL",
+          "destination": "BOS",
+          "departure": "2026-12-28T09:10:00-05:00",
+          "arrival": "2026-12-28T10:39:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "49-minute Charlotte connection outbound; 94 minutes Philadelphia returning. Early return needs host/taxi arrangements. Carry-on may require free gate valet on some regional aircraft.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html"
     },
     {
-      "id": "roa-x",
-      "name": "Roanoke \u00b7 Christmas",
-      "tag": "An existing invitation",
-      "start": "2026-12-22",
-      "end": "2026-12-28",
-      "route": "BOS \u2192 ROA with connection, or long Northeast Regional rail journey; hosts/taxi for final mile.",
-      "transport": [
-        350,
-        800
+      "id": "roa28",
+      "name": "Roanoke \u00b7 Christmas, five days",
+      "city": "Roanoke",
+      "fare": 459,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:22:00Z",
+      "source": "https://helloaxel.com/en/r/7Guwb2x7NE?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Specific baggage, seat, change and refund rules not verified. Zero bag allowance below is a placeholder.",
+      "ground": [
+        10,
+        100
       ],
-      "daily": [
-        15,
-        40
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA2098",
+          "origin": "BOS",
+          "destination": "IAD",
+          "departure": "2026-12-24T09:30:00-05:00",
+          "arrival": "2026-12-24T11:17:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA4831",
+          "origin": "IAD",
+          "destination": "ROA",
+          "departure": "2026-12-24T12:55:00-05:00",
+          "arrival": "2026-12-24T14:18:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "extras": [
-        40,
-        160
+      "inbound": [
+        {
+          "number": "UA4866",
+          "origin": "ROA",
+          "destination": "IAD",
+          "departure": "2026-12-28T20:05:00-05:00",
+          "arrival": "2026-12-28T21:24:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA755",
+          "origin": "IAD",
+          "destination": "BOS",
+          "departure": "2026-12-28T22:20:00-05:00",
+          "arrival": "2026-12-28T23:59:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "care": true,
-      "complexity": 2,
-      "gates": [
-        "Confirm hosts' dates and airport/station pickup.",
-        "Reserve daily rabbit care; rabbit transport remains unverified."
-      ],
-      "note": "Illustrative flight range is return. Compare train separately on exact dates; do not assume rail saves money. Local New Year afterwards."
+      "note": "No extra workdays in the example closure. Return lands 23:59; extend care through arrival home if needed."
     },
     {
-      "id": "roa-rail",
-      "name": "Roanoke \u00b7 Christmas by rail",
-      "tag": "Lower-cost route to quote",
-      "start": "2026-12-22",
-      "end": "2026-12-28",
-      "route": "Boston South Station \u2194 Roanoke by Northeast Regional; verify exact schedule and allow a long travel day each way.",
-      "transport": [
-        180,
-        500
+      "id": "roa27",
+      "name": "Roanoke \u00b7 Christmas, four days",
+      "city": "Roanoke",
+      "fare": 466,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:22:00Z",
+      "source": "https://helloaxel.com/en/r/ENBiMoNaoY?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Specific baggage, seat, change and refund rules not verified. Zero bag allowance below is a placeholder.",
+      "ground": [
+        10,
+        100
       ],
-      "daily": [
-        15,
-        40
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA2098",
+          "origin": "BOS",
+          "destination": "IAD",
+          "departure": "2026-12-24T09:30:00-05:00",
+          "arrival": "2026-12-24T11:17:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA4831",
+          "origin": "IAD",
+          "destination": "ROA",
+          "departure": "2026-12-24T12:55:00-05:00",
+          "arrival": "2026-12-24T14:18:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "extras": [
-        40,
-        160
+      "inbound": [
+        {
+          "number": "UA4866",
+          "origin": "ROA",
+          "destination": "IAD",
+          "departure": "2026-12-27T20:05:00-05:00",
+          "arrival": "2026-12-27T21:24:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA755",
+          "origin": "IAD",
+          "destination": "BOS",
+          "departure": "2026-12-27T22:20:00-05:00",
+          "arrival": "2026-12-27T23:59:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "care": true,
-      "complexity": 2,
-      "gates": [
-        "Confirm hosts' dates and airport/station pickup.",
-        "Reserve daily rabbit care; rabbit transport remains unverified."
-      ],
-      "note": "Rail range is a return planning allowance, not a holiday fare. Rabbit stays with daily care in the example origin. Confirm station pickup and journey tolerance."
+      "note": "Saves one care day versus Dec28 return, costs $7 more in airfare."
     },
     {
-      "id": "lon-x",
-      "name": "London \u00b7 Christmas",
-      "tag": "One European base",
-      "start": "2026-12-20",
-      "end": "2026-12-28",
-      "route": "BOS \u2194 London; airport rail on operating days, friend\u2019s home as base.",
-      "transport": [
-        700,
-        1500
+      "id": "roa23",
+      "name": "Roanoke \u00b7 arrive before Christmas Eve",
+      "city": "Roanoke",
+      "fare": 567,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:22:00Z",
+      "source": "https://helloaxel.com/en/r/WBMKUnMGfd?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Specific baggage, seat, change and refund rules not verified. Zero bag allowance below is a placeholder.",
+      "ground": [
+        10,
+        100
       ],
-      "daily": [
-        30,
-        75
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA721",
+          "origin": "BOS",
+          "destination": "IAD",
+          "departure": "2026-12-23T14:32:00-05:00",
+          "arrival": "2026-12-23T16:19:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA4339",
+          "origin": "IAD",
+          "destination": "ROA",
+          "departure": "2026-12-23T17:50:00-05:00",
+          "arrival": "2026-12-23T19:11:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "extras": [
-        80,
-        200
+      "inbound": [
+        {
+          "number": "UA4866",
+          "origin": "ROA",
+          "destination": "IAD",
+          "departure": "2026-12-28T20:05:00-05:00",
+          "arrival": "2026-12-28T21:24:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA755",
+          "origin": "IAD",
+          "destination": "BOS",
+          "departure": "2026-12-28T22:20:00-05:00",
+          "arrival": "2026-12-28T23:59:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "care": true,
-      "complexity": 3,
-      "gates": [
-        "Confirm friend is available for Christmas.",
-        "Plan Dec 25 within walking distance or price a taxi.",
-        "Check passport, UK entry permission and employer overseas work policy."
-      ],
-      "note": "Christmas Day has no ordinary TfL service. Free lodging does not remove holiday transport constraints."
-    },
-    {
-      "id": "ber-x",
-      "name": "Berlin \u00b7 Christmas",
-      "tag": "One European base",
-      "start": "2026-12-20",
-      "end": "2026-12-28",
-      "route": "BOS \u2194 BER, potentially with connection; airport/regional rail and local transit.",
-      "transport": [
-        800,
-        1700
-      ],
-      "daily": [
-        25,
-        65
-      ],
-      "extras": [
-        70,
-        180
-      ],
-      "care": true,
-      "complexity": 3,
-      "gates": [
-        "Confirm friend and hosting dates.",
-        "Buy supplies ahead of Christmas closures.",
-        "Check Schengen entry and employer overseas work policy."
-      ],
-      "note": "A quiet friend-centered Christmas is more reliable than assuming attractions and shops operate normally."
+      "note": "Dec23 daytime travel overlaps a normal Boston workday; allow leave/flex."
     },
     {
       "id": "lon-n",
-      "name": "London \u00b7 New Year",
-      "tag": "Keep Christmas local",
-      "start": "2026-12-28",
-      "end": "2027-01-06",
-      "route": "BOS \u2194 London, stay with friend; return after the initial holiday rush if quotes justify it.",
-      "transport": [
-        650,
-        1400
+      "name": "London \u00b7 New Year, nonstop",
+      "city": "London",
+      "fare": 1108,
+      "airlinePrice": 1167,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:23:00Z",
+      "source": "https://helloaxel.com/en/r/JJbyV3Ll4j?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Virgin Economy, including Light, permits 1 cabin bag up to10kg,56\u00d736\u00d723cm under official policy. Refund/change conditions remain unverified.",
+      "ground": [
+        40,
+        100
       ],
-      "daily": [
-        30,
-        75
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "VS12",
+          "origin": "BOS",
+          "destination": "LHR",
+          "departure": "2026-12-28T22:11:00-05:00",
+          "arrival": "2026-12-29T09:55:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "extras": [
-        80,
-        240
+      "inbound": [
+        {
+          "number": "VS11",
+          "origin": "LHR",
+          "destination": "BOS",
+          "departure": "2027-01-05T17:20:00+00:00",
+          "arrival": "2027-01-05T20:15:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "care": true,
-      "complexity": 2,
-      "gates": [
-        "Confirm friend\u2019s NYE plans.",
-        "Choose home gathering or reserve an event.",
-        "Confirm daily rabbit care and overseas work permission."
-      ],
-      "note": "NYE is not assumed cheaper: compare identical lengths and return dates. Jan 4\u20136 can be remote days if approved."
+      "note": "Both flights nonstop. Jan1 is not assumed to be an employer holiday. Jan4 remote; Jan5 travel conflict.",
+      "carryOnVerified": true,
+      "bagSource": "https://help.virginatlantic.com/gb/en/baggage/hand-baggage.html"
     },
     {
       "id": "ber-n",
-      "name": "Berlin \u00b7 New Year",
-      "tag": "Keep Christmas local",
-      "start": "2026-12-28",
-      "end": "2027-01-06",
-      "route": "BOS \u2194 BER; public transit and hosted stay.",
-      "transport": [
-        750,
-        1600
-      ],
-      "daily": [
+      "name": "Berlin \u00b7 New Year, lower fare / long return",
+      "city": "Berlin",
+      "fare": 1056,
+      "airlinePrice": 1112,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:23:00Z",
+      "source": "https://helloaxel.com/en/r/13w1cvxokG?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Specific baggage, seat, change and refund rules not verified. Zero bag allowance below is a placeholder.",
+      "ground": [
         25,
-        65
+        80
       ],
-      "extras": [
-        70,
-        220
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "LH425",
+          "origin": "BOS",
+          "destination": "MUC",
+          "departure": "2026-12-28T20:40:00-05:00",
+          "arrival": "2026-12-29T09:50:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "LH1952",
+          "origin": "MUC",
+          "destination": "BER",
+          "departure": "2026-12-29T11:00:00+01:00",
+          "arrival": "2026-12-29T12:10:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "care": true,
-      "complexity": 2,
-      "gates": [
-        "Confirm friend\u2019s NYE availability and preferred neighborhood.",
-        "Consider fireworks/crowd comfort.",
-        "Confirm daily care and overseas work permission."
+      "inbound": [
+        {
+          "number": "LH181",
+          "origin": "BER",
+          "destination": "FRA",
+          "departure": "2027-01-05T11:40:00+01:00",
+          "arrival": "2027-01-05T12:50:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA933",
+          "origin": "FRA",
+          "destination": "IAD",
+          "departure": "2027-01-05T17:00:00+01:00",
+          "arrival": "2027-01-05T20:05:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA755",
+          "origin": "IAD",
+          "destination": "BOS",
+          "departure": "2027-01-05T22:20:00-05:00",
+          "arrival": "2027-01-05T23:59:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "note": "Reserve any paid party explicitly; groceries close Jan 1. Flight schedule and connections must be quoted."
+      "note": "Two stops on return, 18h19 total. Late Boston arrival may require another care day."
     },
     {
-      "id": "lon-f",
-      "name": "London \u00b7 New Year together",
-      "tag": "Berlin friend joins you",
-      "start": "2026-12-28",
-      "end": "2027-01-06",
-      "route": "You: BOS \u2194 London. Friend: BER \u2194 London, dates agreed together.",
-      "transport": [
-        650,
-        1400
-      ],
-      "daily": [
-        30,
-        75
-      ],
-      "extras": [
-        80,
-        240
-      ],
-      "friendTransport": [
-        150,
-        400
-      ],
-      "care": true,
-      "complexity": 3,
-      "gates": [
-        "London host agrees to another guest.",
-        "Berlin friend confirms dates, UK entry eligibility and cost split.",
-        "Confirm daily care and remote work permission."
-      ],
-      "note": "Friend\u2019s return transport is separate; set your subsidy below. Friend\u2019s meals and local costs are not included in your total."
-    },
-    {
-      "id": "split",
-      "name": "Roanoke Christmas \u2192 London NYE",
-      "tag": "Two holidays, more moving parts",
-      "start": "2026-12-22",
-      "end": "2027-01-06",
-      "route": "BOS \u2192 ROA \u2192 London \u2192 BOS; compare protected multi-city ticket vs Boston return plus Europe round trip.",
-      "transport": [
-        1200,
-        2500
-      ],
-      "daily": [
-        25,
-        65
-      ],
-      "extras": [
-        130,
-        330
-      ],
-      "care": true,
-      "complexity": 5,
-      "gates": [
-        "Both hosts confirm dates.",
-        "Daily rabbit care covers the whole absence.",
-        "Allow at least a day between separate tickets or obtain protected connections.",
-        "Confirm employer permits overseas remote work."
-      ],
-      "note": "No rabbit travels on this baseline. Longer care costs can overwhelm flight savings; returning via Boston also costs time."
-    },
-    {
-      "id": "both",
-      "name": "London Christmas \u2192 Berlin NYE",
-      "tag": "Both European friends",
-      "start": "2026-12-20",
-      "end": "2027-01-06",
-      "route": "BOS \u2192 London \u2192 BER \u2192 BOS; compare open-jaw fare plus London\u2013Berlin hop including bags and transfers.",
-      "transport": [
-        1000,
-        2200
-      ],
-      "daily": [
-        30,
-        70
-      ],
-      "extras": [
-        130,
-        330
-      ],
-      "care": true,
-      "complexity": 4,
-      "gates": [
-        "Both friends confirm hosting windows.",
-        "Confirm daily care for extended absence.",
-        "Verify UK and Schengen entry plus overseas work approval."
-      ],
-      "note": "Transport range covers all three air legs, not three return fares. Adds a travel day and more coordination."
-    },
-    {
-      "id": "roa-n",
-      "name": "Roanoke \u00b7 New Year",
-      "tag": "Requires a new invitation",
-      "start": "2026-12-28",
-      "end": "2027-01-04",
-      "route": "BOS \u2194 ROA with connection or long rail journey; hosts/taxi final mile.",
-      "transport": [
-        300,
-        750
-      ],
-      "daily": [
-        15,
-        40
-      ],
-      "extras": [
+      "id": "lon-x",
+      "name": "London \u00b7 Christmas and New Year",
+      "city": "London",
+      "fare": 2153,
+      "airlinePrice": 2267,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:25:00Z",
+      "source": "https://helloaxel.com/en/r/Lt3tYf8YJ6?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "American official policy includes one carry-on plus personal item, including Basic Economy. Cabin bag \u226422\u00d714\u00d79 inches. Exact change/refund terms unresolved.",
+      "ground": [
         40,
-        160
+        100
       ],
-      "care": true,
-      "complexity": 2,
-      "gates": [
-        "Christmas invitation does not imply NYE invitation: confirm hosts.",
-        "Confirm daily care and final-mile transport."
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "AA108",
+          "origin": "BOS",
+          "destination": "LHR",
+          "departure": "2026-12-23T19:10:00-05:00",
+          "arrival": "2026-12-24T07:00:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "note": "Included for completeness; social availability is unknown."
-    },
-    {
-      "id": "lon-both",
-      "name": "London \u00b7 both holidays",
-      "tag": "One base, longer stay",
-      "start": "2026-12-20",
-      "end": "2027-01-06",
-      "route": "BOS \u2194 London; airport rail on operating days, friend\u2019s home as base.",
-      "transport": [
-        700,
-        1500
+      "inbound": [
+        {
+          "number": "AA109",
+          "origin": "LHR",
+          "destination": "BOS",
+          "departure": "2027-01-03T13:10:00+00:00",
+          "arrival": "2027-01-03T15:55:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
       ],
-      "daily": [
-        30,
-        75
-      ],
-      "extras": [
-        80,
-        200
-      ],
-      "care": true,
-      "complexity": 3,
-      "gates": [
-        "Confirm friend is available for Christmas.",
-        "Plan Dec 25 within walking distance or price a taxi.",
-        "Check passport, UK entry permission and employer overseas work policy."
-      ],
-      "note": "One return transatlantic trip with more friend time. Extra daily spending and rabbit care must be outweighed by fare savings or social value; host and work dates unconfirmed."
-    },
-    {
-      "id": "ber-both",
-      "name": "Berlin \u00b7 both holidays",
-      "tag": "One base, longer stay",
-      "start": "2026-12-20",
-      "end": "2027-01-06",
-      "route": "BOS \u2194 BER, potentially with connection; airport/regional rail and local transit.",
-      "transport": [
-        800,
-        1700
-      ],
-      "daily": [
-        25,
-        65
-      ],
-      "extras": [
-        70,
-        180
-      ],
-      "care": true,
-      "complexity": 3,
-      "gates": [
-        "Confirm friend and hosting dates.",
-        "Buy supplies ahead of Christmas closures.",
-        "Check Schengen entry and employer overseas work policy."
-      ],
-      "note": "One return transatlantic trip with more friend time. Extra daily spending and rabbit care must be outweighed by fare savings or social value; host and work dates unconfirmed."
+      "note": "Both directions nonstop. Dec23 airport buffer overlaps the end of a Boston workday; consider flex. Jan1 remains a workday unless separately confirmed off.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html"
     }
   ],
-  "budget": 1000,
-  "work": {
-    "calendar": "Unknown; provide privately",
-    "preference": "Unknown; provide privately",
-    "requiredHours": null
-  }
+  "unresolvedOptions": [
+    {
+      "name": "Roanoke rail",
+      "status": "Schedule candidate only; exact-date fare/operation unverified",
+      "detail": "171 weekday BOS08:12\u2013RNK22:13;178 weekday RNK10:10\u2013BOS00:15+1. These are published November runs, not confirmed December services.",
+      "source": "https://taketrains.com/us/amtrak/171"
+    },
+    {
+      "name": "Berlin friend joins London",
+      "status": "No exact flight/date agreement or quote yet",
+      "detail": "Friend travel is separate unless you choose to pay it; enter only your agreed contribution in a private scenario ground/transport allowance."
+    },
+    {
+      "name": "Roanoke Christmas + Europe NYE",
+      "status": "No protected multi-city quote yet",
+      "detail": "Not presented as a priced itinerary. Do not add unrelated round-trip quotes or reuse a return segment twice."
+    }
+  ]
 }

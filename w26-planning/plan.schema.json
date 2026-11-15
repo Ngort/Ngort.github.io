@@ -1,54 +1,89 @@
 {
   "type": "object",
-  "additionalProperties": false,
   "properties": {
     "schemaVersion": {
       "type": "integer",
       "enum": [
-        1
+        2
       ]
     },
     "updatedAt": {
       "type": "string"
     },
+    "selected": {
+      "type": "string",
+      "enum": [
+        "home",
+        "roa-aa",
+        "roa28",
+        "roa27",
+        "roa23",
+        "lon-n",
+        "ber-n",
+        "lon-x"
+      ]
+    },
     "settings": {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "budget": {
           "type": "number",
           "minimum": 0,
           "maximum": 100000
         },
-        "careExtras": {
+        "careTransfer": {
           "type": "number",
           "minimum": 0,
           "maximum": 100000
         },
-        "holidayDays": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 90
-        },
-        "thankyou": {
+        "holidayCareDays": {
           "type": "number",
           "minimum": 0,
           "maximum": 100000
         },
-        "contingency": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "documents": {
+        "supplementRate": {
           "type": "number",
           "minimum": 0,
           "maximum": 100000
         },
-        "subsidy": {
+        "friendCareCost": {
           "type": "number",
           "minimum": 0,
-          "maximum": 100
+          "maximum": 100000
+        },
+        "workStart": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "workEnd": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "leadHours": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "arrivalHours": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "careConfirmed": {
+          "type": "boolean"
+        },
+        "jan1Off": {
+          "type": "boolean"
+        },
+        "holidayStart": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "holidayEnd": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
         },
         "care": {
           "type": "string",
@@ -57,26 +92,28 @@
             "visits",
             "friend"
           ]
-        },
-        "careConfirmed": {
-          "type": "boolean"
         }
       },
       "required": [
         "budget",
-        "careExtras",
-        "holidayDays",
-        "thankyou",
-        "contingency",
-        "documents",
-        "subsidy",
-        "care",
-        "careConfirmed"
-      ]
+        "careTransfer",
+        "holidayCareDays",
+        "supplementRate",
+        "friendCareCost",
+        "workStart",
+        "workEnd",
+        "leadHours",
+        "arrivalHours",
+        "careConfirmed",
+        "jan1Off",
+        "holidayStart",
+        "holidayEnd",
+        "care"
+      ],
+      "additionalProperties": false
     },
     "answers": {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "priorities": {
           "type": "string",
@@ -100,89 +137,109 @@
         "work",
         "confirmations",
         "limits"
-      ]
+      ],
+      "additionalProperties": false
     },
     "scenarios": {
       "type": "array",
       "items": {
         "type": "object",
-        "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
             "enum": [
               "home",
-              "roa-x",
-              "roa-rail",
-              "lon-x",
-              "ber-x",
+              "roa-aa",
+              "roa28",
+              "roa27",
+              "roa23",
               "lon-n",
               "ber-n",
-              "lon-f",
-              "split",
-              "both",
-              "roa-n",
-              "lon-both",
-              "ber-both"
+              "lon-x"
             ]
           },
-          "start": {
+          "fareOverride": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "ground": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100000
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "bagAllowance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "bagsConfirmed": {
+            "type": "boolean"
+          },
+          "extraCareDays": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30
+          },
+          "quoteNotes": {
             "type": "string",
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            "maxLength": 20000
           },
-          "end": {
-            "type": "string",
-            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-          },
-          "transport": {
+          "workOverrides": {
             "type": "array",
             "items": {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 100000
-            },
-            "minItems": 2,
-            "maxItems": 2
-          },
-          "daily": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 100000
-            },
-            "minItems": 2,
-            "maxItems": 2
-          },
-          "extras": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 100000
-            },
-            "minItems": 2,
-            "maxItems": 2
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "remote",
+                    "leave"
+                  ]
+                }
+              },
+              "required": [
+                "date",
+                "kind"
+              ],
+              "additionalProperties": false
+            }
           }
         },
         "required": [
           "id",
-          "start",
-          "end",
-          "transport",
-          "daily",
-          "extras"
-        ]
+          "fareOverride",
+          "ground",
+          "bagAllowance",
+          "bagsConfirmed",
+          "extraCareDays",
+          "quoteNotes",
+          "workOverrides"
+        ],
+        "additionalProperties": false
       },
-      "minItems": 13,
-      "maxItems": 13
+      "minItems": 8,
+      "maxItems": 8
     }
   },
   "required": [
     "schemaVersion",
     "updatedAt",
+    "selected",
     "settings",
     "answers",
     "scenarios"
-  ]
+  ],
+  "additionalProperties": false
 }

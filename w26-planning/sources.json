@@ -1,15 +1,122 @@
 [
-{"id":"hrn-rate","title":"House Rabbit Network · boarding","url":"https://www.friendsofhrn.org/bunsitting-services","checked":"2026-11-15","fact":"Published $30/day per pen. Availability, holiday terms and transfer costs unconfirmed.","recheck":"Before reservation"},
-{"id":"julia-rate","title":"Julia’s Pet Pals · small-pet visits","url":"https://www.juliaspetpals.com/pet-drop-in-visits-and-pit-stops","checked":"2026-11-15","fact":"Published $30/30-minute small-pet visit, $10 holiday surcharge per visit, $15 first meeting. Exact holiday dates and availability unconfirmed.","recheck":"Before reservation"},
-{"id":"rabbit-care","title":"House Rabbit Network · bunny sitting","url":"https://www.rabbitnetwork.org/resources/articles/calvins-care-corner/calvins-care-corner-bunny-sitting-101/","checked":"2026-11-15","fact":"At least daily checks, preferably twice daily, by someone who knows rabbit care. Weekly visits alone are insufficient.","recheck":"When preparing care plan"},
-{"id":"roa","title":"Roanoke Airport · destinations","url":"https://flyroa.com/where-we-fly","checked":"2026-11-15","fact":"Boston absent from listed nonstop destinations. Quote connecting flights; do not assume a Boston nonstop.","recheck":"At exact-date fare search"},
-{"id":"rail","title":"Amtrak · Northeast Regional","url":"https://www.amtrak.com/northeastregional","checked":"2026-11-15","fact":"Boston and Roanoke on the route; exact journey duration, schedule and fare must be obtained.","recheck":"At exact-date fare search"},
-{"id":"rail-pet","title":"Amtrak · pets","url":"https://www.amtrak.com/pets","checked":"2026-11-15","fact":"Pet program is for cats/dogs, with a seven-hour journey limit; not a rabbit transport solution.","recheck":"Before choosing pet travel"},
-{"id":"smartway","title":"Valley Metro · Smart Way","url":"https://www.valleymetro.com/services/smart-way-services","checked":"2026-11-15","fact":"Airport/downtown service, published $4 each way. Exact holiday operation and onward travel to host unresolved.","recheck":"Before committing itinerary"},
-{"id":"london","title":"Visit London · Christmas travel","url":"https://www.visitlondon.com/things-to-do/whats-on/christmas/christmas-in-london-essential-information","checked":"2026-11-15","fact":"No ordinary public transport on Christmas Day; reduced holiday services. Verify exact airport and overnight services.","recheck":"Before travel and when holiday timetables release"},
-{"id":"berlin","title":"Visit Berlin · Christmas","url":"https://www.visitberlin.de/en/christmas-berlin","checked":"2026-11-15","fact":"Grocery closures Dec 25/26 and Jan 1; limited Dec 24 shopping. Specific venues vary.","recheck":"Before planning meals/activities"},
-{"id":"aa","title":"American · cabin pet policy","url":"https://www.aa.com/web/i18n/travel-info/special-assistance/pets.html","checked":"2026-11-15","fact":"Cats/dogs accepted under cabin pet policy; no rabbit option established.","recheck":"Directly with operating carrier before booking"},
-{"id":"delta","title":"Delta · pet travel","url":"https://www.delta.com/us/en/pet-travel/overview","checked":"2026-11-15","fact":"Cabin policy lists cats/dogs/household birds; no rabbit option established.","recheck":"Directly with operating carrier before booking"},
-{"id":"frontier","title":"Frontier · pets","url":"https://www.flyfrontier.com/travel/travel-info/family-pets/","checked":"2026-11-15","fact":"Domestic rabbits accepted subject to policy. No practical BOS–Roanoke itinerary or final-mile rabbit transfer established.","recheck":"Directly with operating carrier before booking"},
-{"id":"uk-entry","title":"UK · ETA eligibility","url":"https://www.gov.uk/guidance/check-when-you-can-get-an-electronic-travel-authorisation-eta","checked":"2026-11-15","fact":"Entry requirements depend on nationality/status. Eligibility, fee and overseas work permission unresolved.","recheck":"Before quote comparison and booking"}
+  {
+    "id": "hrn-rate",
+    "title": "House Rabbit Network \u00b7 boarding",
+    "url": "https://www.friendsofhrn.org/bunsitting-services",
+    "checked": "2026-11-15",
+    "fact": "Published $30/day per pen. Availability, holiday terms and transfer costs unconfirmed.",
+    "recheck": "Before reservation"
+  },
+  {
+    "id": "julia-rate",
+    "title": "Julia\u2019s Pet Pals \u00b7 small-pet visits",
+    "url": "https://www.juliaspetpals.com/pet-drop-in-visits-and-pit-stops",
+    "checked": "2026-11-15",
+    "fact": "Published $30/30-minute small-pet visit, $10 holiday surcharge per visit, $15 first meeting. Exact holiday dates and availability unconfirmed.",
+    "recheck": "Before reservation"
+  },
+  {
+    "id": "rabbit-care",
+    "title": "House Rabbit Network \u00b7 bunny sitting",
+    "url": "https://www.rabbitnetwork.org/resources/articles/calvins-care-corner/calvins-care-corner-bunny-sitting-101/",
+    "checked": "2026-11-15",
+    "fact": "At least daily checks, preferably twice daily, by someone who knows rabbit care. Weekly visits alone are insufficient.",
+    "recheck": "When preparing care plan"
+  },
+  {
+    "id": "roa",
+    "title": "Roanoke Airport \u00b7 destinations",
+    "url": "https://flyroa.com/where-we-fly",
+    "checked": "2026-11-15",
+    "fact": "Boston absent from listed nonstop destinations. Quote connecting flights; do not assume a Boston nonstop.",
+    "recheck": "At exact-date fare search"
+  },
+  {
+    "id": "rail",
+    "title": "Amtrak \u00b7 Northeast Regional",
+    "url": "https://www.amtrak.com/northeastregional",
+    "checked": "2026-11-15",
+    "fact": "Boston and Roanoke on the route; exact journey duration, schedule and fare must be obtained.",
+    "recheck": "At exact-date fare search"
+  },
+  {
+    "id": "rail-pet",
+    "title": "Amtrak \u00b7 pets",
+    "url": "https://www.amtrak.com/pets",
+    "checked": "2026-11-15",
+    "fact": "Pet program is for cats/dogs, with a seven-hour journey limit; not a rabbit transport solution.",
+    "recheck": "Before choosing pet travel"
+  },
+  {
+    "id": "smartway",
+    "title": "Valley Metro \u00b7 Smart Way",
+    "url": "https://www.valleymetro.com/services/smart-way-services",
+    "checked": "2026-11-15",
+    "fact": "Airport/downtown service, published $4 each way. Exact holiday operation and onward travel to host unresolved.",
+    "recheck": "Before committing itinerary"
+  },
+  {
+    "id": "london",
+    "title": "Visit London \u00b7 Christmas travel",
+    "url": "https://www.visitlondon.com/things-to-do/whats-on/christmas/christmas-in-london-essential-information",
+    "checked": "2026-11-15",
+    "fact": "No ordinary public transport on Christmas Day; reduced holiday services. Verify exact airport and overnight services.",
+    "recheck": "Before travel and when holiday timetables release"
+  },
+  {
+    "id": "berlin",
+    "title": "Visit Berlin \u00b7 Christmas",
+    "url": "https://www.visitberlin.de/en/christmas-berlin",
+    "checked": "2026-11-15",
+    "fact": "Grocery closures Dec 25/26 and Jan 1; limited Dec 24 shopping. Specific venues vary.",
+    "recheck": "Before planning meals/activities"
+  },
+  {
+    "id": "aa",
+    "title": "American \u00b7 cabin pet policy",
+    "url": "https://www.aa.com/web/i18n/travel-info/special-assistance/pets.html",
+    "checked": "2026-11-15",
+    "fact": "Cats/dogs accepted under cabin pet policy; no rabbit option established.",
+    "recheck": "Directly with operating carrier before booking"
+  },
+  {
+    "id": "delta",
+    "title": "Delta \u00b7 pet travel",
+    "url": "https://www.delta.com/us/en/pet-travel/overview",
+    "checked": "2026-11-15",
+    "fact": "Cabin policy lists cats/dogs/household birds; no rabbit option established.",
+    "recheck": "Directly with operating carrier before booking"
+  },
+  {
+    "id": "frontier",
+    "title": "Frontier \u00b7 pets",
+    "url": "https://www.flyfrontier.com/travel/travel-info/family-pets/",
+    "checked": "2026-11-15",
+    "fact": "Domestic rabbits accepted subject to policy. No practical BOS\u2013Roanoke itinerary or final-mile rabbit transfer established.",
+    "recheck": "Directly with operating carrier before booking"
+  },
+  {
+    "id": "uk-entry",
+    "title": "UK \u00b7 ETA eligibility",
+    "url": "https://www.gov.uk/guidance/check-when-you-can-get-an-electronic-travel-authorisation-eta",
+    "checked": "2026-11-15",
+    "fact": "Entry requirements depend on nationality/status. Eligibility, fee and overseas work permission unresolved.",
+    "recheck": "Before quote comparison and booking"
+  },
+  {
+    "id": "aa-carry",
+    "title": "American \u00b7 carry-on dimensions and allowance",
+    "url": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html",
+    "checked": "2026-11-15",
+    "fact": "1 carry-on up to22\u00d714\u00d79in plus personal item; some regional aircraft require free gate valet. Specific Roanoke Main Cabin quote explicitly includes carry-on.",
+    "recheck": "Before purchase"
+  },
+  {
+    "id": "vs-carry",
+    "title": "Virgin \u00b7 Economy hand baggage",
+    "url": "https://help.virginatlantic.com/gb/en/baggage/hand-baggage.html",
+    "checked": "2026-11-15",
+    "fact": "Economy including Light permits1 cabin bag up to10kg and56\u00d736\u00d723cm; exact itinerary operators and current terms must match.",
+    "recheck": "Before purchase"
+  }
 ]
