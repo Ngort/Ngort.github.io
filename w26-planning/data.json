@@ -384,6 +384,597 @@
       "note": "Both directions nonstop. Dec23 airport buffer overlaps the end of a Boston workday; consider flex. Jan1 remains a workday unless separately confirmed off.",
       "carryOnVerified": true,
       "bagSource": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html"
+    },
+    {
+      "id": "roa-early18",
+      "name": "Roanoke \u00b7 Dec18\u201328, lower fare / longer care",
+      "city": "Roanoke",
+      "fare": 533,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:39:00Z",
+      "source": "https://helloaxel.com/en/r/hqAYlcrFZl?fare=0&fare_ref=2e8fbbc920f6d71d&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Basic Economy quote explicitly includes 1 free carry-on. No ticket changes or refunds. Seat selection extra. No checked bag needed; optional first checked bag $110 round trip. Regional aircraft may require free gate valet.",
+      "ground": [
+        10,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "AA391",
+          "origin": "BOS",
+          "destination": "LGA",
+          "departure": "2026-12-18T09:20:00-05:00",
+          "arrival": "2026-12-18T10:37:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA4688",
+          "origin": "LGA",
+          "destination": "ROA",
+          "departure": "2026-12-18T11:46:00-05:00",
+          "arrival": "2026-12-18T13:46:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "AA5931",
+          "origin": "ROA",
+          "destination": "PHL",
+          "departure": "2026-12-28T06:00:00-05:00",
+          "arrival": "2026-12-28T07:36:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA4443",
+          "origin": "PHL",
+          "destination": "BOS",
+          "departure": "2026-12-28T09:10:00-05:00",
+          "arrival": "2026-12-28T10:39:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "10 destination nights. Dec18 daytime travel overlaps work: PTO/flex required. Dec21\u201323 can be remote if host workspace/internet confirmed. No work obligation assumed during Dec24\u201331 closure. 69-minute LGA and 94-minute PHL connections. Airfare savings versus Dec24 AA quote are $145; six extra rabbit care-days can outweigh this at $30/day.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html"
+    },
+    {
+      "id": "roa-early20",
+      "name": "Roanoke \u00b7 Dec20\u201327, weekend travel / remote week",
+      "city": "Roanoke",
+      "fare": 650,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:39:00Z",
+      "source": "https://helloaxel.com/en/r/mSPjm7CU0y?fare=0&fare_ref=dd8147cb4bad74ef&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Main Cabin quote explicitly includes 1 free carry-on and free seat selection. Changes free plus possible fare difference; nonrefundable. Optional checked bag $100 round trip not required. Regional aircraft may require free gate valet.",
+      "ground": [
+        10,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "AA1004",
+          "origin": "BOS",
+          "destination": "CLT",
+          "departure": "2026-12-20T08:00:00-05:00",
+          "arrival": "2026-12-20T10:31:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA5813",
+          "origin": "CLT",
+          "destination": "ROA",
+          "departure": "2026-12-20T11:20:00-05:00",
+          "arrival": "2026-12-20T12:40:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "AA5931",
+          "origin": "ROA",
+          "destination": "PHL",
+          "departure": "2026-12-27T06:00:00-05:00",
+          "arrival": "2026-12-27T07:36:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AA4443",
+          "origin": "PHL",
+          "destination": "BOS",
+          "departure": "2026-12-27T09:10:00-05:00",
+          "arrival": "2026-12-27T10:39:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "7 destination nights. Sunday outbound and return avoid weekday travel. Dec21\u201323 remote or PTO; confirm host workspace/internet and host availability. 49-minute CLT connection outbound is tight. $28 less airfare than Dec24\u201328 AA, but three extra care-days likely increase trip total.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.aa.com/web/i18n/travel-info/baggage/carry-on-baggage.html"
+    },
+    {
+      "id": "roa-short26",
+      "name": "Roanoke \u00b7 Dec24\u201326, two nights / personal item",
+      "city": "Roanoke",
+      "fare": 520,
+      "airlinePrice": null,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:38:00Z",
+      "source": "https://helloaxel.com/en/r/bBBgtQamhh?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Personal-item-only planning case for two destination nights. Specific fare brand and carry-on inclusion remain unverified. Do not use this fare as carry-on-inclusive for longer stays.",
+      "ground": [
+        10,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA2098",
+          "origin": "BOS",
+          "destination": "IAD",
+          "departure": "2026-12-24T09:30:00-05:00",
+          "arrival": "2026-12-24T11:17:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA4831",
+          "origin": "IAD",
+          "destination": "ROA",
+          "departure": "2026-12-24T12:55:00-05:00",
+          "arrival": "2026-12-24T14:18:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "UA4866",
+          "origin": "ROA",
+          "destination": "IAD",
+          "departure": "2026-12-26T20:05:00-05:00",
+          "arrival": "2026-12-26T21:24:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA755",
+          "origin": "IAD",
+          "destination": "BOS",
+          "departure": "2026-12-26T22:20:00-05:00",
+          "arrival": "2026-12-26T23:59:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "2 destination nights; no remote/PTO workdays during Dec24\u201331 closure. 98-minute IAD outbound and 56-minute return connections. Lands 23:59; actual arrival home is Dec27, so care may extend another day.",
+      "carryOnVerified": false,
+      "bagSource": "https://www.united.com/en/us/fly/baggage/carry-on-bags.html"
+    },
+    {
+      "id": "lon-dec30-jan7",
+      "name": "London \u00b7 New Year, Dec30\u2013Jan7 nonstop",
+      "city": "London",
+      "fare": 859,
+      "airlinePrice": 906,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:40:00Z",
+      "source": "https://helloaxel.com/en/r/hfmTOUCWXm?fare=0&fare_ref=f950f957b44b93fb&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Delta Main Basic selected quote includes 1 free carry-on. Official maximum 22\u00d714\u00d79 inches including handles/wheels. No seat selection, last boarding; changes for a fee; nonrefundable. Checked bag not needed; optional first checked bag quoted $150 round trip.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "DL58",
+          "origin": "BOS",
+          "destination": "LHR",
+          "departure": "2026-12-30T19:10:00-05:00",
+          "arrival": "2026-12-31T06:50:00+00:00",
+          "operator": "Delta Air Lines"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "DL59",
+          "origin": "LHR",
+          "destination": "BOS",
+          "departure": "2027-01-07T09:40:00+00:00",
+          "arrival": "2027-01-07T12:20:00-05:00",
+          "operator": "Delta Air Lines"
+        }
+      ],
+      "note": "Both flights nonstop; arrives London NYE morning. Jan7 morning flight overlaps Boston workday after ground transfers. $47 below provider-reported airline fare; recheck before purchase.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.delta.com/us/en/baggage/carry-on-baggage"
+    },
+    {
+      "id": "lon-dec29-jan10",
+      "name": "London \u00b7 New Year, Dec29\u2013Jan10 nonstop",
+      "city": "London",
+      "fare": 933,
+      "airlinePrice": 985,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:40:00Z",
+      "source": "https://helloaxel.com/en/r/OSbjsXzra2?fare=0&fare_ref=31130aaf810c424b&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Economy Light selected quote includes 1 free carry-on. Official indexed policy: maximum 10kg,56\u00d736\u00d723cm. Seat selection and changes for a fee; nonrefundable. Optional checked bag quoted $200 round trip.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "VS12",
+          "origin": "BOS",
+          "destination": "LHR",
+          "departure": "2026-12-29T22:11:00-05:00",
+          "arrival": "2026-12-30T09:55:00+00:00",
+          "operator": "Virgin Atlantic"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "VS11",
+          "origin": "LHR",
+          "destination": "BOS",
+          "departure": "2027-01-10T17:20:00+00:00",
+          "arrival": "2027-01-10T20:15:00-05:00",
+          "operator": "Virgin Atlantic"
+        }
+      ],
+      "note": "Both flights nonstop; Sunday return avoids normal weekday flight conflict. Extra away days raise care cost. $52 below provider-reported airline fare; recheck before purchase.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.virginatlantic.com/en-CA/help/articles/what-is-my-hand-baggage-allowance----a5a24d4c-a652-4fbd-925d-57d0ead2ed5e"
+    },
+    {
+      "id": "lon-dec16-jan6",
+      "name": "London \u00b7 Both holidays, early Dec16\u2013Jan6",
+      "city": "London",
+      "fare": 1119,
+      "airlinePrice": 1180,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:40:00Z",
+      "source": "https://helloaxel.com/en/r/9d07JiPAXL?fare=0&fare_ref=cca9e0608b9d42b4&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Delta Main Basic selected quote includes 1 free carry-on. Official maximum 22\u00d714\u00d79 inches including handles/wheels. No seat selection, last boarding; changes for a fee; nonrefundable. Checked bag not needed; optional first checked bag quoted $150 round trip. Virgin return policy also permits one 10kg cabin bag; pack to stricter dimensions.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "DL2391",
+          "origin": "BOS",
+          "destination": "ATL",
+          "departure": "2026-12-16T13:50:00-05:00",
+          "arrival": "2026-12-16T16:55:00-05:00",
+          "operator": "Delta Air Lines"
+        },
+        {
+          "number": "DL30",
+          "origin": "ATL",
+          "destination": "LHR",
+          "departure": "2026-12-16T18:40:00-05:00",
+          "arrival": "2026-12-17T07:50:00+00:00",
+          "operator": "Delta Air Lines"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "VS11",
+          "origin": "LHR",
+          "destination": "BOS",
+          "departure": "2027-01-06T17:20:00+00:00",
+          "arrival": "2027-01-06T20:15:00-05:00",
+          "operator": "Virgin Atlantic"
+        }
+      ],
+      "note": "13-hour outbound via Atlanta, 1h45 connection; nonstop return. Leaves before example closure, increasing leave/remote and care burden. $61 below provider-reported airline fare.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.delta.com/us/en/baggage/carry-on-baggage"
+    },
+    {
+      "id": "lon-early-long",
+      "name": "London \u00b7 earlier Christmas departure, Dec15\u201328",
+      "city": "London",
+      "fare": 817,
+      "airlinePrice": 861,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:39:00Z",
+      "source": "https://helloaxel.com/en/r/aHiRtfB5Il?fare=0&fare_ref=8c6141e69220a612&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Fare-specific Economy quote includes1 free carry-on. Delta cabin maximum22\u00d714\u00d79in; use same or smaller for United, whose dimensions still need independent verification. Free gate-check may occur on small aircraft. Checked bags excluded. Changes/refunds unlisted.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "DL2330",
+          "origin": "BOS",
+          "destination": "ATL",
+          "departure": "2026-12-15T16:10:00-05:00",
+          "arrival": "2026-12-15T19:12:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "DL32",
+          "origin": "ATL",
+          "destination": "LHR",
+          "departure": "2026-12-15T19:55:00-05:00",
+          "arrival": "2026-12-16T09:00:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "UA905",
+          "origin": "LHR",
+          "destination": "EWR",
+          "departure": "2026-12-28T09:10:00+00:00",
+          "arrival": "2026-12-28T12:40:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA1598",
+          "origin": "EWR",
+          "destination": "BOS",
+          "departure": "2026-12-28T14:35:00-05:00",
+          "arrival": "2026-12-28T15:50:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "Christmas in London, NYE home. Separate outbound/return tickets disclosed by quote; do not imply one protected ticket throughout. Outbound ATL connection43m; return EWR1h55m. Dec15 travel overlaps work; Dec16\u201318 and21\u201323 remote candidates, with Dec16 travel overlap requiring flex if buffers reach work window. Additional care days can erase the fare saving. Cached608 FI lead absent from selected live results.",
+      "carryOnVerified": true,
+      "bagSource": "https://helloaxel.com/en/r/aHiRtfB5Il?fare=0&fare_ref=8c6141e69220a612&price_basis=non_member&utm_content=booking_link_manual"
+    },
+    {
+      "id": "lon-post-holiday",
+      "name": "London \u00b7 after holidays, Jan4\u201312",
+      "city": "London",
+      "fare": 690,
+      "airlinePrice": 727,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:40:00Z",
+      "source": "https://helloaxel.com/en/r/PkwfBV5RpZ?fare=0&fare_ref=fc2614c592770621&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Economy Light fare-specific quote:1 free carry-on, seat selection paid, no changes, no refunds. Official Icelandair cabin maximum10kg and55\u00d740\u00d720cm including wheels/handles. Checked bag excluded.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "FI630",
+          "origin": "BOS",
+          "destination": "KEF",
+          "departure": "2027-01-04T19:50:00-05:00",
+          "arrival": "2027-01-05T06:05:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "FI450",
+          "origin": "KEF",
+          "destination": "LHR",
+          "departure": "2027-01-05T07:35:00+00:00",
+          "arrival": "2027-01-05T10:50:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "FI451",
+          "origin": "LHR",
+          "destination": "KEF",
+          "departure": "2027-01-12T12:15:00+00:00",
+          "arrival": "2027-01-12T15:30:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "FI631",
+          "origin": "KEF",
+          "destination": "BOS",
+          "departure": "2027-01-12T17:00:00+00:00",
+          "arrival": "2027-01-12T17:50:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "Cheaper postholiday social visit; misses both Christmas and NYE. Jan5 and12 travel/flex; Jan6\u20138 and11 remote candidates. Jan4 evening departure needs airport-buffer/work-window check. Both KEF connections90m. Cached575 becomes690 complete quote; no400\u2013500 fare verified. Compare ground and daily care costs against your private budget.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.icelandair.com/support/on-board/classes-of-service/"
+    },
+    {
+      "id": "lon-early-short",
+      "name": "London \u00b7 before holidays, Dec15\u201320; home Dec21",
+      "city": "London",
+      "fare": 820,
+      "airlinePrice": 867,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:40:00Z",
+      "source": "https://helloaxel.com/en/r/HYZYvCDkNY?fare=0&fare_ref=853ca2d7b85a80ab&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Fare-specific Economy quote includes1 free carry-on. SWISS cabin limit8kg,55\u00d740\u00d723cm; United dimension limit remains to verify, so pack to strictest verified carrier limit only after review. Checked bag excluded. Changes/refunds unlisted.",
+      "ground": [
+        40,
+        100
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA1833",
+          "origin": "BOS",
+          "destination": "EWR",
+          "departure": "2026-12-15T06:00:00-05:00",
+          "arrival": "2026-12-15T07:27:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA934",
+          "origin": "EWR",
+          "destination": "LHR",
+          "departure": "2026-12-15T08:20:00-05:00",
+          "arrival": "2026-12-15T20:35:00+00:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "LX339",
+          "origin": "LHR",
+          "destination": "ZRH",
+          "departure": "2026-12-20T20:05:00+00:00",
+          "arrival": "2026-12-20T22:45:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "LX52",
+          "origin": "ZRH",
+          "destination": "BOS",
+          "departure": "2026-12-21T17:30:00+01:00",
+          "arrival": "2026-12-21T20:20:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "Beforeholiday visit misses both holidays. Outbound EWR53m; return Zurich overnight18h45m, return duration29h15m. Dec15 and21 travel/work conflicts; Dec16\u201318 remote candidates. Overnight Zurich accommodation/access unpriced, so cannot claim complete ground cost or cap feasibility. Care extends through Dec21. Cheaper flight is not a lower-stress option.",
+      "carryOnVerified": true,
+      "bagSource": "https://helloaxel.com/en/r/HYZYvCDkNY?fare_check=3&utm_content=booking_link_manual"
+    },
+    {
+      "id": "ber-long",
+      "name": "Berlin \u00b7 Christmas and NYE, Dec20\u2013Jan3; homeJan4",
+      "city": "Berlin",
+      "fare": 1652,
+      "airlinePrice": 1747,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:44:00Z",
+      "source": "https://helloaxel.com/en/r/HLDt9TGALf?utm_content=booking_link_manual&utm_source=chatgpt.com&utm_medium=assistant&price_basis=non_member",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Carry-on inclusion and exact change/refund rules unresolved; fare rules did not load. Required carry-on is not assumed free.",
+      "ground": [
+        25,
+        80
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "UA546",
+          "origin": "BOS",
+          "destination": "EWR",
+          "departure": "2026-12-20T15:32:00-05:00",
+          "arrival": "2026-12-20T17:00:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "UA994",
+          "origin": "EWR",
+          "destination": "BRU",
+          "departure": "2026-12-20T18:55:00-05:00",
+          "arrival": "2026-12-21T08:05:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "SN2581",
+          "origin": "BRU",
+          "destination": "BER",
+          "departure": "2026-12-21T09:40:00+01:00",
+          "arrival": "2026-12-21T11:05:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "LH195",
+          "origin": "BER",
+          "destination": "FRA",
+          "departure": "2027-01-03T18:40:00+01:00",
+          "arrival": "2027-01-03T19:50:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AC845",
+          "origin": "FRA",
+          "destination": "YUL",
+          "departure": "2027-01-04T09:45:00+01:00",
+          "arrival": "2027-01-04T12:00:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AC8608",
+          "origin": "YUL",
+          "destination": "BOS",
+          "departure": "2027-01-04T13:25:00-05:00",
+          "arrival": "2027-01-04T14:53:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "Christmas and NYE in Berlin; Dec21\u201323 remote/flex candidates and Jan1 not assumed off. Jan4 return overlaps work. Two stops each way; return26h13m includes13h55 Frankfurt overnight, accommodation/airport access unpriced. Cached775 became1652 selected quote. Ground and care add to the quoted fare.",
+      "carryOnVerified": false
+    },
+    {
+      "id": "ber-extended-nye",
+      "name": "Berlin \u00b7 NYE with later return, Dec30\u2013Jan10",
+      "city": "Berlin",
+      "fare": 924,
+      "airlinePrice": 977,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T15:43:00Z",
+      "source": "https://helloaxel.com/en/r/KwICbg2WMy?fare=0&fare_ref=b6434c8f2c278cc3&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "baggage": "Delta Main Basic selected fare explicitly includes1 free carry-on for whole trip; no seat selection, last boarding, changes for fee, no refunds. Delta size22\u00d714\u00d79in; AF/KLM55\u00d735\u00d725cm with12kg combined cabin+personal item. Pack within55\u00d735\u00d722cm and12kg combined to respect all listed limits. Gate-check possible; exact operators unverified.",
+      "ground": [
+        25,
+        80
+      ],
+      "groundStatus": "planning_allowance",
+      "outbound": [
+        {
+          "number": "DL224",
+          "origin": "BOS",
+          "destination": "CDG",
+          "departure": "2026-12-30T16:55:00-05:00",
+          "arrival": "2026-12-31T06:00:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "AF1434",
+          "origin": "CDG",
+          "destination": "BER",
+          "departure": "2026-12-31T07:15:00+01:00",
+          "arrival": "2026-12-31T09:05:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "KL1770",
+          "origin": "BER",
+          "destination": "AMS",
+          "departure": "2027-01-10T06:00:00+01:00",
+          "arrival": "2027-01-10T07:25:00+01:00",
+          "operator": "Exact-date operating carrier unverified"
+        },
+        {
+          "number": "DL257",
+          "origin": "AMS",
+          "destination": "BOS",
+          "departure": "2027-01-10T12:15:00+01:00",
+          "arrival": "2027-01-10T14:23:00-05:00",
+          "operator": "Exact-date operating carrier unverified"
+        }
+      ],
+      "note": "Arrives NYE morning; delay leaves little celebration buffer. CDG75m outbound; AMS4h50 returning; return14h23. Jan1 not assumed off; Jan4\u20138 remote candidates. Sunday return avoids another weekday travel conflict. Cached733 became924 selected quote; ground and care add to the quoted fare.",
+      "carryOnVerified": true,
+      "bagSource": "https://helloaxel.com/en/r/KwICbg2WMy?fare=0&fare_ref=b6434c8f2c278cc3&price_basis=non_member&utm_content=booking_link_manual"
     }
   ],
   "unresolvedOptions": [
