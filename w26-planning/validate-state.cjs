@@ -1,0 +1,2 @@
+const fs=require('node:fs');const model=require('./model.js');const data=require('./data.json');
+try{if(!process.argv[2])throw Error('Usage: node validate-state.cjs PRIVATE_STATE.json');model.validate(JSON.parse(fs.readFileSync(process.argv[2],'utf8')),data.scenarios.map(x=>x.id));console.log('Working state valid. Review factual changes and evidence before import.');}catch(e){console.error(e.message);process.exitCode=1;}

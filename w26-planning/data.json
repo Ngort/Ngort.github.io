@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "asOf": "2026-11-15",
+  "currency": "USD",
+  "assumptions": [
+    "PUBLIC DEMONSTRATION DATA: cities, dates, costs and host arrangements are fictional planning examples, not anyone\u2019s confirmed plans.",
+    "Example origin: Boston, Massachusetts. Confirm actual origin in your private state.",
+    "Example period: Christmas 2026 / New Year 2027. Dates are illustrative only.",
+    "Example accommodation costs zero, subject to host confirmation.",
+    "All transport ranges are planning estimates, NOT live fares or availability.",
+    "Rabbit care charged for every calendar day away, including departure and return.",
+    "Daily spending includes meals, local travel and activities; excludes normal home spending offset."
+  ],
+  "scenarios": [
+    {
+      "id": "home",
+      "name": "Boston \u00b7 both holidays",
+      "tag": "Lowest coordination",
+      "start": "2026-12-24",
+      "end": "2027-01-01",
+      "route": "Stay local from the example origin; MBTA and walking.",
+      "transport": [
+        0,
+        40
+      ],
+      "daily": [
+        0,
+        20
+      ],
+      "extras": [
+        0,
+        100
+      ],
+      "care": false,
+      "complexity": 1,
+      "gates": [
+        "Choose local company and holiday plans."
+      ],
+      "note": "Best fallback if budget or rabbit care blocks travel. Local spending is optional, not a cost of being away."
+    },
+    {
+      "id": "roa-x",
+      "name": "Roanoke \u00b7 Christmas",
+      "tag": "An existing invitation",
+      "start": "2026-12-22",
+      "end": "2026-12-28",
+      "route": "BOS \u2192 ROA with connection, or long Northeast Regional rail journey; hosts/taxi for final mile.",
+      "transport": [
+        350,
+        800
+      ],
+      "daily": [
+        15,
+        40
+      ],
+      "extras": [
+        40,
+        160
+      ],
+      "care": true,
+      "complexity": 2,
+      "gates": [
+        "Confirm hosts' dates and airport/station pickup.",
+        "Reserve daily rabbit care; rabbit transport remains unverified."
+      ],
+      "note": "Illustrative flight range is return. Compare train separately on exact dates; do not assume rail saves money. Local New Year afterwards."
+    },
+    {
+      "id": "roa-rail",
+      "name": "Roanoke \u00b7 Christmas by rail",
+      "tag": "Lower-cost route to quote",
+      "start": "2026-12-22",
+      "end": "2026-12-28",
+      "route": "Boston South Station \u2194 Roanoke by Northeast Regional; verify exact schedule and allow a long travel day each way.",
+      "transport": [
+        180,
+        500
+      ],
+      "daily": [
+        15,
+        40
+      ],
+      "extras": [
+        40,
+        160
+      ],
+      "care": true,
+      "complexity": 2,
+      "gates": [
+        "Confirm hosts' dates and airport/station pickup.",
+        "Reserve daily rabbit care; rabbit transport remains unverified."
+      ],
+      "note": "Rail range is a return planning allowance, not a holiday fare. Rabbit stays with daily care in the example origin. Confirm station pickup and journey tolerance."
+    },
+    {
+      "id": "lon-x",
+      "name": "London \u00b7 Christmas",
+      "tag": "One European base",
+      "start": "2026-12-20",
+      "end": "2026-12-28",
+      "route": "BOS \u2194 London; airport rail on operating days, friend\u2019s home as base.",
+      "transport": [
+        700,
+        1500
+      ],
+      "daily": [
+        30,
+        75
+      ],
+      "extras": [
+        80,
+        200
+      ],
+      "care": true,
+      "complexity": 3,
+      "gates": [
+        "Confirm friend is available for Christmas.",
+        "Plan Dec 25 within walking distance or price a taxi.",
+        "Check passport, UK entry permission and employer overseas work policy."
+      ],
+      "note": "Christmas Day has no ordinary TfL service. Free lodging does not remove holiday transport constraints."
+    },
+    {
+      "id": "ber-x",
+      "name": "Berlin \u00b7 Christmas",
+      "tag": "One European base",
+      "start": "2026-12-20",
+      "end": "2026-12-28",
+      "route": "BOS \u2194 BER, potentially with connection; airport/regional rail and local transit.",
+      "transport": [
+        800,
+        1700
+      ],
+      "daily": [
+        25,
+        65
+      ],
+      "extras": [
+        70,
+        180
+      ],
+      "care": true,
+      "complexity": 3,
+      "gates": [
+        "Confirm friend and hosting dates.",
+        "Buy supplies ahead of Christmas closures.",
+        "Check Schengen entry and employer overseas work policy."
+      ],
+      "note": "A quiet friend-centered Christmas is more reliable than assuming attractions and shops operate normally."
+    },
+    {
+      "id": "lon-n",
+      "name": "London \u00b7 New Year",
+      "tag": "Keep Christmas local",
+      "start": "2026-12-28",
+      "end": "2027-01-06",
+      "route": "BOS \u2194 London, stay with friend; return after the initial holiday rush if quotes justify it.",
+      "transport": [
+        650,
+        1400
+      ],
+      "daily": [
+        30,
+        75
+      ],
+      "extras": [
+        80,
+        240
+      ],
+      "care": true,
+      "complexity": 2,
+      "gates": [
+        "Confirm friend\u2019s NYE plans.",
+        "Choose home gathering or reserve an event.",
+        "Confirm daily rabbit care and overseas work permission."
+      ],
+      "note": "NYE is not assumed cheaper: compare identical lengths and return dates. Jan 4\u20136 can be remote days if approved."
+    },
+    {
+      "id": "ber-n",
+      "name": "Berlin \u00b7 New Year",
+      "tag": "Keep Christmas local",
+      "start": "2026-12-28",
+      "end": "2027-01-06",
+      "route": "BOS \u2194 BER; public transit and hosted stay.",
+      "transport": [
+        750,
+        1600
+      ],
+      "daily": [
+        25,
+        65
+      ],
+      "extras": [
+        70,
+        220
+      ],
+      "care": true,
+      "complexity": 2,
+      "gates": [
+        "Confirm friend\u2019s NYE availability and preferred neighborhood.",
+        "Consider fireworks/crowd comfort.",
+        "Confirm daily care and overseas work permission."
+      ],
+      "note": "Reserve any paid party explicitly; groceries close Jan 1. Flight schedule and connections must be quoted."
+    },
+    {
+      "id": "lon-f",
+      "name": "London \u00b7 New Year together",
+      "tag": "Berlin friend joins you",
+      "start": "2026-12-28",
+      "end": "2027-01-06",
+      "route": "You: BOS \u2194 London. Friend: BER \u2194 London, dates agreed together.",
+      "transport": [
+        650,
+        1400
+      ],
+      "daily": [
+        30,
+        75
+      ],
+      "extras": [
+        80,
+        240
+      ],
+      "friendTransport": [
+        150,
+        400
+      ],
+      "care": true,
+      "complexity": 3,
+      "gates": [
+        "London host agrees to another guest.",
+        "Berlin friend confirms dates, UK entry eligibility and cost split.",
+        "Confirm daily care and remote work permission."
+      ],
+      "note": "Friend\u2019s return transport is separate; set your subsidy below. Friend\u2019s meals and local costs are not included in your total."
+    },
+    {
+      "id": "split",
+      "name": "Roanoke Christmas \u2192 London NYE",
+      "tag": "Two holidays, more moving parts",
+      "start": "2026-12-22",
+      "end": "2027-01-06",
+      "route": "BOS \u2192 ROA \u2192 London \u2192 BOS; compare protected multi-city ticket vs Boston return plus Europe round trip.",
+      "transport": [
+        1200,
+        2500
+      ],
+      "daily": [
+        25,
+        65
+      ],
+      "extras": [
+        130,
+        330
+      ],
+      "care": true,
+      "complexity": 5,
+      "gates": [
+        "Both hosts confirm dates.",
+        "Daily rabbit care covers the whole absence.",
+        "Allow at least a day between separate tickets or obtain protected connections.",
+        "Confirm employer permits overseas remote work."
+      ],
+      "note": "No rabbit travels on this baseline. Longer care costs can overwhelm flight savings; returning via Boston also costs time."
+    },
+    {
+      "id": "both",
+      "name": "London Christmas \u2192 Berlin NYE",
+      "tag": "Both European friends",
+      "start": "2026-12-20",
+      "end": "2027-01-06",
+      "route": "BOS \u2192 London \u2192 BER \u2192 BOS; compare open-jaw fare plus London\u2013Berlin hop including bags and transfers.",
+      "transport": [
+        1000,
+        2200
+      ],
+      "daily": [
+        30,
+        70
+      ],
+      "extras": [
+        130,
+        330
+      ],
+      "care": true,
+      "complexity": 4,
+      "gates": [
+        "Both friends confirm hosting windows.",
+        "Confirm daily care for extended absence.",
+        "Verify UK and Schengen entry plus overseas work approval."
+      ],
+      "note": "Transport range covers all three air legs, not three return fares. Adds a travel day and more coordination."
+    },
+    {
+      "id": "roa-n",
+      "name": "Roanoke \u00b7 New Year",
+      "tag": "Requires a new invitation",
+      "start": "2026-12-28",
+      "end": "2027-01-04",
+      "route": "BOS \u2194 ROA with connection or long rail journey; hosts/taxi final mile.",
+      "transport": [
+        300,
+        750
+      ],
+      "daily": [
+        15,
+        40
+      ],
+      "extras": [
+        40,
+        160
+      ],
+      "care": true,
+      "complexity": 2,
+      "gates": [
+        "Christmas invitation does not imply NYE invitation: confirm hosts.",
+        "Confirm daily care and final-mile transport."
+      ],
+      "note": "Included for completeness; social availability is unknown."
+    },
+    {
+      "id": "lon-both",
+      "name": "London \u00b7 both holidays",
+      "tag": "One base, longer stay",
+      "start": "2026-12-20",
+      "end": "2027-01-06",
+      "route": "BOS \u2194 London; airport rail on operating days, friend\u2019s home as base.",
+      "transport": [
+        700,
+        1500
+      ],
+      "daily": [
+        30,
+        75
+      ],
+      "extras": [
+        80,
+        200
+      ],
+      "care": true,
+      "complexity": 3,
+      "gates": [
+        "Confirm friend is available for Christmas.",
+        "Plan Dec 25 within walking distance or price a taxi.",
+        "Check passport, UK entry permission and employer overseas work policy."
+      ],
+      "note": "One return transatlantic trip with more friend time. Extra daily spending and rabbit care must be outweighed by fare savings or social value; host and work dates unconfirmed."
+    },
+    {
+      "id": "ber-both",
+      "name": "Berlin \u00b7 both holidays",
+      "tag": "One base, longer stay",
+      "start": "2026-12-20",
+      "end": "2027-01-06",
+      "route": "BOS \u2194 BER, potentially with connection; airport/regional rail and local transit.",
+      "transport": [
+        800,
+        1700
+      ],
+      "daily": [
+        25,
+        65
+      ],
+      "extras": [
+        70,
+        180
+      ],
+      "care": true,
+      "complexity": 3,
+      "gates": [
+        "Confirm friend and hosting dates.",
+        "Buy supplies ahead of Christmas closures.",
+        "Check Schengen entry and employer overseas work policy."
+      ],
+      "note": "One return transatlantic trip with more friend time. Extra daily spending and rabbit care must be outweighed by fare savings or social value; host and work dates unconfirmed."
+    }
+  ],
+  "budget": 1000,
+  "work": {
+    "calendar": "Unknown; provide privately",
+    "preference": "Unknown; provide privately",
+    "requiredHours": null
+  }
+}
