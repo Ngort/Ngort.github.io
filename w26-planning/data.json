@@ -7,14 +7,14 @@
   "scenarios": [
     {
       "id": "home",
-      "name": "Boston \u00b7 stay local",
+      "name": "Boston \u00b7 Christmas & New Year at home",
       "city": "Boston",
       "fare": 0,
       "airlinePrice": null,
       "quoteStatus": "no_travel",
       "quotedAt": null,
       "source": null,
-      "priceBasis": "Axel-exclusive, one adult economy; required taxes included; no membership",
+      "priceBasis": "Stay-home baseline: no intercity travel or additional rabbit-care expense",
       "baggage": "No baggage charge.",
       "ground": [
         0,
@@ -23,7 +23,9 @@
       "groundStatus": "planning_allowance",
       "outbound": [],
       "inbound": [],
-      "note": "No trip, rabbit stays at home."
+      "note": "Spend Christmas and New Year at home in Boston. Rabbit stays with you; no additional care expense or remote/leave days caused by travel. Normal living costs and local leisure are outside this planner.",
+      "stayStart": "2026-12-24",
+      "stayEnd": "2027-01-03"
     },
     {
       "id": "roa-aa",
@@ -1470,6 +1472,70 @@
       "carryOnVerified": true,
       "baggage": "Roanoke: Personal-item-only planning case for two destination nights. Specific fare brand and carry-on inclusion remain unverified. Do not use this fare as carry-on-inclusive for longer stays. London: Economy Light fare-specific quote:1 free carry-on, seat selection paid, no changes, no refunds. Official Icelandair cabin maximum10kg and55\u00d740\u00d720cm including wheels/handles. Checked bag excluded.",
       "note": "Two separate round trips with a return home to Boston between them. Christmas in Virginia; London visit starts after NYE. Virginia is only 2 destination nights: personal item baseline; bring a cabin carry-on on the separate London trip. Fare is the sum of the existing saved quotes, not a new combined fare. Care excludes days fully at home between trips; daily cover still needs confirmation."
+    },
+    {
+      "id": "rabbit-f9-iad",
+      "name": "Virginia with rabbit \u00b7 Frontier via Atlanta, Dec23\u201328; home Dec29",
+      "city": "Roanoke",
+      "fare": 566,
+      "airlinePrice": 597,
+      "quoteStatus": "complete_quote",
+      "quotedAt": "2026-11-15T16:17:00Z",
+      "source": "https://helloaxel.com/en/r/X6kP8QBQeK?fare=1&fare_ref=eff6ec952e2eac71&price_basis=non_member&utm_content=booking_link_manual",
+      "priceBasis": "Axel-exclusive, one adult Economy Bundle; required taxes included; no membership; rabbit fee excluded",
+      "baggage": "Economy Bundle explicitly includes one carry-on and seat selection; free changes with possible fare difference. Refund terms unlisted. Frontier carry-on maximum24\u00d716\u00d710in and35lb including wheels, handles and straps; rabbit carrier travels under seat instead of personal item.",
+      "carryOnVerified": true,
+      "bagSource": "https://www.flyfrontier.com/travel/travel-info/bag-options/",
+      "ground": [
+        0,
+        0
+      ],
+      "groundStatus": "unpriced_pet_transfer",
+      "outbound": [
+        {
+          "number": "F91773",
+          "origin": "BOS",
+          "destination": "ATL",
+          "departure": "2026-12-23T08:28:00-05:00",
+          "arrival": "2026-12-23T11:49:00-05:00",
+          "operator": "Frontier marketing carrier; exact-date operating carrier not independently verified"
+        },
+        {
+          "number": "F94410",
+          "origin": "ATL",
+          "destination": "IAD",
+          "departure": "2026-12-23T13:25:00-05:00",
+          "arrival": "2026-12-23T15:13:00-05:00",
+          "operator": "Frontier marketing carrier; exact-date operating carrier not independently verified"
+        }
+      ],
+      "inbound": [
+        {
+          "number": "F93691",
+          "origin": "IAD",
+          "destination": "ATL",
+          "departure": "2026-12-28T22:59:00-05:00",
+          "arrival": "2026-12-29T01:03:00-05:00",
+          "operator": "Frontier marketing carrier; exact-date operating carrier not independently verified"
+        },
+        {
+          "number": "F93512",
+          "origin": "ATL",
+          "destination": "BOS",
+          "departure": "2026-12-29T05:01:00-05:00",
+          "arrival": "2026-12-29T07:43:00-05:00",
+          "operator": "Frontier marketing carrier; exact-date operating carrier not independently verified"
+        }
+      ],
+      "note": "Complete airfare quote; ground transport and rabbit reservations unresolved. Check pet space and operating carrier acceptance on every segment, carrier fit, health documents and host acceptance. Outbound6h45 with ATL1h36 connection; return8h44 with overnight ATL3h58 connection. Dec23 and Dec29 work windows need travel buffers/flex review. IAD is not Roanoke: private vehicle or host pickup both ways must be agreed and priced. Amtrak and Virginia Breeze ordinary pet policies cannot carry this rabbit. $0 ground and extra-pet inputs are unpriced placeholders, not free transport. Known flight-plus-rabbit subtotal is $864. No at-home rabbit care is charged because the rabbit travels with you; separate Europe itineraries still need care.",
+      "petTravel": {
+        "fee": 298,
+        "feeSource": "https://www.flyfrontier.com/optional-services/",
+        "policySource": "https://faq.flyfrontier.com/help/do-you-allow-pets-on-the-plane",
+        "speciesPolicyVerified": true,
+        "carrier": "Soft-sided max 18\u00d714\u00d711 in; hard-sided 18\u00d714\u00d78 in. Must fit under seat and let rabbit stand, turn and lie naturally.",
+        "unresolved": "Rabbit space and operating carrier on all segments, carrier fit, health requirements, host acceptance, and rabbit-friendly private transfer between Dulles and Roanoke. Ground duration is unverified; work counts use the entered buffers and remain provisional."
+      }
     }
   ],
   "unresolvedOptions": [

@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),m=require('./model.js'),d=require('./data.json');
 const p={budget:950,combinedBudget:1500,care:'boarding',careTransfer:0,holidayCareDays:2,supplementRate:40,friendCareCost:0,workStart:9,workEnd:17,leadHours:3,arrivalHours:1.5,holidayStart:'2026-12-24',holidayEnd:'2026-12-31',careConfirmed:false,jan1Off:false};
-const edit=s=>({id:s.id,fareOverride:null,ground:s.ground,bagAllowance:0,bagsConfirmed:false,extraCareDays:0,quoteNotes:'',workOverrides:[]});
+const edit=s=>({id:s.id,fareOverride:null,ground:s.ground,bagAllowance:0,petExtras:0,petLogisticsConfirmed:false,bagsConfirmed:false,extraCareDays:0,quoteNotes:'',workOverrides:[]});
 const roa=d.scenarios.find(s=>s.id==='roa28');let r=m.calculate(roa,p,edit(roa));
 assert.deepEqual(r.total,[649,739]);assert.equal(r.careDays,6);assert.equal(r.careEnd,'2026-12-29');assert.equal(r.remote,0);assert.equal(r.leave,0);assert.equal(r.nights,4);assert(r.carryOnRequired);assert(!r.bagRequirementVerified);
 r=m.calculate(roa,{...p,arrivalHours:0},edit(roa));assert.equal(r.careDays,5);
@@ -48,3 +48,29 @@ assert.equal(m.calculate(shortPair,p,edit(shortPair)).careDays,m.calculate(short
 const overridden={...edit(secondCombo),workOverrides:[{date:'2027-01-01',kind:'leave'}]};assert.equal(m.calculate(secondCombo,p,overridden).work.find(x=>x.date==='2027-01-01').kind,'leave');
 for(const combinedBudget of [-1,Infinity,'1500',undefined]){const bad=JSON.parse(JSON.stringify(v));bad.settings.combinedBudget=combinedBudget;assert.throws(()=>m.validate(bad,ids));}
 console.log('Passed: combined itinerary care intervals, home gaps, weekly rounding, work conflicts, component bag rules and separate combined budget.');
+const homePlan=d.scenarios.find(s=>s.id==='home');r=m.calculate(homePlan,p,edit(homePlan));assert.deepEqual(r.total,[0,0]);assert.equal(r.careDays,0);assert.equal(r.remote,0);assert.equal(r.leave,0);assert(r.work.some(day=>day.date==='2026-12-25'&&day.kind==='holiday'));assert(r.work.some(day=>day.date==='2027-01-01'&&day.kind==='home'));
+const freePrefs={...p,care:'free',careTransfer:80,friendCareCost:120,supplementRate:55};r=m.calculate(london,freePrefs,edit(london));assert.equal(r.care,0);assert(r.careDays>0);assert.deepEqual(r.total,london.ground.map(g=>london.fare+g));assert.equal(freePrefs.careConfirmed,false);m.validate({...v,settings:freePrefs},ids);
+console.log('Passed: Boston Christmas home baseline and zero-cost daily care without erasing coverage days.');
+
+// Rabbit accompanies its owner on an explicit domestic pet itinerary. The
+// human work/travel timeline remains intact; boarding and sitter charges do not.
+const petFixture={...JSON.parse(JSON.stringify(early)),id:'pet-fixture',fare:566,ground:[0,0],groundStatus:'unpriced_pet_transfer',petTravel:{fee:298}};
+const petEdit={...edit(petFixture),extraCareDays:3};
+for(const care of ['boarding','visits','friend','free']){
+ const prefs={...p,care,careTransfer:90,friendCareCost:110};
+ r=m.calculate(petFixture,prefs,petEdit);
+ assert.equal(r.rabbitWithOwner,true);assert.equal(r.careDays,0);assert.equal(r.care,0);
+ assert.equal(r.petFee,298);assert.equal(r.petExtras,0);assert(r.petLogisticsPending);
+ assert.deepEqual(r.careIntervals,[]);assert.equal(r.careStart,null);assert.equal(r.careEnd,null);
+ assert.deepEqual(r.total,[864,864]);assert.equal(r.status,'Pet logistics unresolved');
+ assert.equal(r.leave,m.calculate(early,p,edit(early)).leave);
+ assert.deepEqual(r.work,m.calculate(early,p,edit(early)).work);
+ assert(m.span(petFixture,prefs).length>0);
+}
+r=m.calculate(petFixture,p,{...petEdit,ground:[180,240],petExtras:85,bagAllowance:30,petLogisticsConfirmed:true});
+assert.deepEqual(r.total,[1159,1219]);assert.equal(r.petExtras,85);assert.equal(r.petLogisticsPending,false);assert.equal(r.status,'Over cap');
+assert.deepEqual(m.calculate(petFixture,p,{...petEdit,fareOverride:600}).total,[898,898]);
+r=m.calculate(london,p,edit(london));assert(!r.rabbitWithOwner);assert.equal(r.petFee,0);assert.equal(r.petExtras,0);assert(!r.petLogisticsPending);assert(r.care>0);assert(r.careDays>0);
+r=m.calculate(firstCombo,p,edit(firstCombo));assert(!r.rabbitWithOwner);assert.equal(r.care,420);
+for(const change of [e=>delete e.petExtras,e=>e.petExtras=-1,e=>e.petExtras=Infinity,e=>e.petExtras='20',e=>delete e.petLogisticsConfirmed,e=>e.petLogisticsConfirmed='yes']){const bad=JSON.parse(JSON.stringify(v));change(bad.scenarios[0]);assert.throws(()=>m.validate(bad,ids));}
+console.log('Passed: explicit rabbit-with-owner trip fees, unresolved logistics, owner workdays, no sitter charges, and strict pet inputs.');

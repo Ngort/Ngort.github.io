@@ -34,7 +34,8 @@
         "ber-extended-nye",
         "combo-nye",
         "combo-jan",
-        "combo-short"
+        "combo-short",
+        "rabbit-f9-iad"
       ]
     },
     "settings": {
@@ -109,7 +110,8 @@
           "enum": [
             "boarding",
             "visits",
-            "friend"
+            "friend",
+            "free"
           ]
         }
       },
@@ -189,7 +191,8 @@
               "ber-extended-nye",
               "combo-nye",
               "combo-jan",
-              "combo-short"
+              "combo-short",
+              "rabbit-f9-iad"
             ]
           },
           "fareOverride": {
@@ -226,6 +229,14 @@
             "type": "string",
             "maxLength": 20000
           },
+          "petExtras": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "petLogisticsConfirmed": {
+            "type": "boolean"
+          },
           "workOverrides": {
             "type": "array",
             "items": {
@@ -259,12 +270,14 @@
           "bagsConfirmed",
           "extraCareDays",
           "quoteNotes",
+          "petExtras",
+          "petLogisticsConfirmed",
           "workOverrides"
         ],
         "additionalProperties": false
       },
-      "minItems": 22,
-      "maxItems": 22
+      "minItems": 23,
+      "maxItems": 23
     }
   },
   "required": [
